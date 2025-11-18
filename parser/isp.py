@@ -8,7 +8,7 @@ def count_artists_tracks(file_path):
 
     # Регулярное выражение для поиска фитов и совместных исполнителей
     # Ищем конструкции с feat., feat, &, и просто запятые между исполнителями
-    feat_pattern = re.compile(r'(?:\s+feat\.?|\s+&|\s+и|,)\s+', re.IGNORECASE)
+    feat_pattern = re.compile(r'(?:\s+feat\.?|\s+&|,)\s+', re.IGNORECASE)
 
     with open(file_path, 'r', encoding='utf-8') as file:
         for line in file:
